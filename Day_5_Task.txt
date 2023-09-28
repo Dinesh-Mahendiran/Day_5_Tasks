@@ -1,0 +1,128 @@
+1)
+
+Day-5)
+
+Using for loop
+
+var request = new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v2/all");
+request.send();
+request.onload=function()
+{
+    var result = JSON.parse(request.response);
+    for(var i=0;i<result.length;i++)
+    {
+        console.log(result[i].name,result[i].region);
+    }
+}
+
+
+Using for in loop
+
+var request = new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v2/all");
+request.send();
+request.onload=function()
+{
+    var result = JSON.parse(request.response);
+    for(var x in result)
+    {
+        console.log(x[i].name,x[i].region);
+    }
+}
+
+Using for of loop
+
+var request = new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v2/all");
+request.send();
+request.onload=function()
+{
+    var result = JSON.parse(request.response);
+    for(var x of result)
+    {
+        console.log(x.name,x.region);
+    }
+}
+
+Using foEach
+
+
+var request = new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v2/all");
+request.send();
+request.onload=function()
+{
+    var result = JSON.parse(request.response);
+    result.forEach(function(mydata)
+    {
+        console.log(mydata.name);
+    })
+}
+
+
+
+
+
+2)let myResume={
+    "basics": 
+	{
+      "name": "Dinesh Mahendiran",
+      "email": "dineshmcm07@gmail.com.com",
+      "phone": 9500818668,
+      "degree": "B.E",
+      "location": {
+        "address": "2/54,Mugalaivakkam",
+        "postalCode": 603102,
+        "city": "Chennai",
+        "state": "Tamilnadu",
+        "country": "India"
+      },
+      "profiles": [
+        {
+         
+          "github":"https://github.com/Dinesh-Mahendiran/Dinesh-Mahendiran"
+        }
+      ]
+    },
+    "work": [
+      {
+        "company": "Excelacom Technologies pvt lmt",
+        "position": "Program Analyst",
+        "startDate": "2022-03-21",
+        "endDate": "2023-08-21",
+        "summary": "Create and enthusiastic developer who loves to explore new things",
+      },
+    ],
+    "education": [
+      {
+        "institution": "Velammal Engineering college",
+        "department": "Computer Science and Engineering",
+        "studyType": "fulltime",
+        "batch start year": 2018,
+        "batch end year": 2022,
+        "gpa": 8.29,
+      }
+    ],
+    "skills": [
+      {
+        "name": "SQL,javascript",
+        "level": "beginer",
+        "project": [
+          "Online e-commerce application;"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "language": "Tamil,English,Telugu",
+      }
+    ],
+    "interests": [
+      {
+        "name": "Playing games like cricket,volley ball",
+      }
+    ]
+  }
+  console.log(myResume);
+  
